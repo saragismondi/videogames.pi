@@ -13,8 +13,7 @@ module.exports = (sequelize) => {
     },
     name: {
       type: DataTypes.STRING,
-      allowNull: false, // allowNull : son boligatorios, no pueden estar en blanco
-      unique: true,
+      allowNull: false, 
     },
     description: {
       type: DataTypes.TEXT,
@@ -38,12 +37,6 @@ module.exports = (sequelize) => {
     },
     // le paso esta propiedad, creado en baso de datos, por si solo quiero hacer el llamado en la bse de datos.
     // es mas facil acceder al personaje que cree en mi base de datos, va a tener datos diferente a lso demas
-    createdInDb: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false,
-      defaultVlaue: true,
-    },
-    
   });
 };
  // PONER TIMESTAMP EN FALSE PARA QU E ME QUITE DE LA BASE DE DATOS EL CRATED Y ELL UPGRADEAT 

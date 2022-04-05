@@ -26,3 +26,4 @@ conn.sync({ force: true }).then(() => {
     console.log('%s listening at 3001 MAMI VOS PODES! :)'); // eslint-disable-line no-console
   });
 });
+//  en true se reinicia la base e datos 

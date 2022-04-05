@@ -87,10 +87,8 @@ rutaVideogame.post("/", async (req, res) => {
     description,
     released,
     rating,
-    background_image,
     genres,
     platforms,
-    createdInDb,
   } = req.body;
   console.log(req.body);
 
@@ -99,9 +97,8 @@ rutaVideogame.post("/", async (req, res) => {
     description,
     released,
     rating,
-    background_image,
+    genres,
     platforms, //hacer que entre en un array directo aunque sea 1 solo juego
-    createdInDb,
   }); //
 
   let genreDb = await Genres.findAll({
@@ -120,7 +117,7 @@ rutaVideogame.post("/", async (req, res) => {
 //   "platforms": ["ajajjajajajjhsj"],
 //   "released" : "fjdjdjd",
 //   "rating": 12.12,
-//   "background_image": "https://media.rawg.io/media/games/238/2383a172b4d50a7b44e07980eb7141ea.jpg",
+//   
 //   "genres": "jajajaja",
 //   "createdInDb": true 
 // }
