@@ -1,0 +1,22 @@
+
+.homeConteiner{
+    background-color: rgb(243, 240, 174);
+}
+.homeTitle{
+    margin: 0px;
+    
+
+}
+.homeTitleConteiner{
+    background-color: rgb(52, 43, 131);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+.cardsConteiner{
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ grid-gap: 12px;
+ padding: 30px;
+}

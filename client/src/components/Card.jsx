@@ -1,5 +1,5 @@
 import React from "react";
-
+import "../css/Card.css";
 export const Card = ({name, id, genres, image}) => {
  
 const handleDirecToDetails = () => {
@@ -7,13 +7,13 @@ const handleDirecToDetails = () => {
 
 };
     return (
-        <div>   
-                <h3>NOMBRE:{name}</h3>
+        <div className="cardConteiner">   
+                <h3 className="bienvenidos cardTitle"> {name}</h3>
                 <img src={image} width="400px" height="250px" alt=""/>
-                <p>GENEROS</p>
-               {genres.map((e) => e)}
+                <p className=" bienvenidos cardGenre">Generos</p>
+               {genres.map((e) => e + "  | ")}
                <p></p>
-            <button onClick={handleDirecToDetails}> LEER MAS DETALLES </button>
+            <button onClick={handleDirecToDetails}>Mas detalles </button>
         </div>
     )
 };

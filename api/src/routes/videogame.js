@@ -90,7 +90,7 @@ rutaVideogame.post("/", async (req, res) => {
     genres,
     platforms,
   } = req.body;
-  console.log(req.body);
+ // console.log(req.body);
 
   const videogameCreated = await Videogame.create({
     name,

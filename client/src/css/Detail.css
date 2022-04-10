@@ -1,0 +1,23 @@
+.detailContenier{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+.infoDetailConteiner{
+    font-family: 'inherit';
+    margin: 20px;
+    font-size: 1.2rem;
+    background-color: rgba(255, 255, 255, 0.541);
+}
+.detailDescription{
+    text-align: justify;
+    margin: 50px 80px;
+   
+}
+.detailPlatforms{
+    margin: 20px;
+    font-weight: 900;
+}

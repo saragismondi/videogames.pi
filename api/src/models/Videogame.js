@@ -35,9 +35,7 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING,
       allowNull: true
     },
-    // le paso esta propiedad, creado en baso de datos, por si solo quiero hacer el llamado en la bse de datos.
-    // es mas facil acceder al personaje que cree en mi base de datos, va a tener datos diferente a lso demas
+    
   });
 };
- // PONER TIMESTAMP EN FALSE PARA QU E ME QUITE DE LA BASE DE DATOS EL CRATED Y ELL UPGRADEAT 
- //
+ 

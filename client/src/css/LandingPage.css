@@ -1,0 +1,90 @@
+.landingFondo{
+    background-image: url("https://areajugones.sport.es/wp-content/uploads/2020/05/Adventure-Time-Distant-Lands-BMO.png");
+    display: flex;
+    height: 100vh;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    
+}
+ 
+.landingbotton{
+    margin: 50px;
+  font-family: inherit;
+
+  
+}
+.fill {
+    font-size: 20px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    padding: 13px 50px 13px;
+    outline: 0;
+    border: 1px solid black;
+    cursor: pointer;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 5;
+  }
+  .fill::after {
+    content: "";
+    background-color: #f5e8a0;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    top: 7px;
+    left: 7px;
+    transition: 0.2s;
+  }
+  
+  .fill:hover::after {
+    top: 0px;
+    left: 0px;
+
+  }
+  .bienvenidos {
+    font-size: 3rem;
+    font-weight: 900;
+    color: rgb(224, 107, 86);
+    
+    --x-offset: -0.0625em;
+    --y-offset: 0.0625em;
+    --stroke: 0.025em;
+    --background-color: white;
+    --stroke-color: lightblue;
+    
+    text-shadow: 
+      
+      var(--x-offset)
+      var(--y-offset)
+      0px
+      var(--background-color), 
+      
+      calc( var(--x-offset) - var(--stroke) )
+      calc( var(--y-offset) + var(--stroke) )
+      0px
+      var(--stroke-color);
+    
+  }
+  
+  @supports ( text-shadow: 1px 1px 1px 1px black ) {
+    .bienvenidos {
+      text-shadow:
+        
+        var(--x-offset)
+        var(--y-offset)
+        0px
+        0px
+        var(--background-color), 
+        
+        var(--x-offset) 
+        var(--y-offset)
+        var(--stroke)
+        0px
+        var(--stroke-color);
+      
+    }
+  }

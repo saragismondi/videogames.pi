@@ -1,0 +1,12 @@
+.formConteiner{
+    background-color: rgb(243, 240, 174);
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.formConteiner input{
+    margin: 20px;
+    width: 100%;
+}

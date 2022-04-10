@@ -1,0 +1,17 @@
+.cardConteiner{
+    background-color: white;
+    box-shadow: 5px 2px 5px black; 
+    padding: 12px;
+}
+.cardTitle{
+    font-family: 'inherit';
+    margin: 20px;
+    font-size: 1.5rem;
+
+}
+.cardGenre{
+    font-family: 'inherit';
+    margin: 20px;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
