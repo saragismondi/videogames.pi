@@ -2,7 +2,6 @@ import { React, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllGenre } from "../redux/actions";
 
-
 export const Filtrados = ({ handleFilter, handleSource, handleSort }) => {
     const dispatch = useDispatch()
     const generos = useSelector((state) => state.allGenres);
@@ -30,9 +29,8 @@ export const Filtrados = ({ handleFilter, handleSource, handleSort }) => {
             </select>
             <select id="sourceselect" onChange={handleSource}>
                 <option value=""> Todos</option>
-                <option value="api">API</option>
-                <option value="created">Created</option>
-
+                <option value="api">Videogames</option>
+                <option value="created">Creados</option>
             </select>
         </div>
     )

@@ -61,21 +61,16 @@ export const Form = () => {
     };
 
     const handleSelectedGenres = (e) => {
-
         setInput({
             ...input,
             genres: [...input.genres, e.target.value],
         })
-        console.log(input.genres, "hola soy todos los inputgenres")
     }
     const handleSelectedPlatforms = (e) => {
-
         setInput({
             ...input,
             platforms: [...input.platforms, e.target.value],
-
         })
-        console.log(input.platforms, "hola soy todos los input.platfomrs")
     }
 
     const handleSubmit = (e) => {
@@ -109,17 +104,21 @@ export const Form = () => {
             document.getElementById("genreId").value = "";
         }
     };
+    const clear = () => {
+        setInput("")
+        dispatch(getAllVideogames(""))
+    };
     return (
         <div className="formConteiner">
             {loading ? <Loading /> :
                 <>
-                    <h4 className="bienvenidos homeTitle">Aqui puedes crear tu propio Videogame ! </h4>
+                    <h4 className="bienvenidos homeTitle">Aqui puedes ingresar un Videogame ! </h4>
                     <form onSubmit={handleSubmit}>
                         <div>
-                            <input type="text" name="name" value={input.name} onChange={handleChange} placeholder="aqui va el nombre" />
-                            <input type="text" name="description" value={input.description} onChange={handleChange} placeholder="aqui va el la description" />
-                            <input type="text" name="released" value={input.released} onChange={handleChange} placeholder="aqui va cuando se lanzo" />
-                            <input type="number" name="rating" value={input.rating} onChange={handleChange} placeholder="aqui va el rating" />
+                            <input type="text" name="name" value={input.name} onChange={handleChange} placeholder="Nombre" />
+                            <input type="text" name="description" value={input.description} onChange={handleChange} placeholder="Descripción" />
+                            <input type="text" name="released" value={input.released} onChange={handleChange} placeholder="Lanzamiento" />
+                            <input type="number" name="rating" value={input.rating} onChange={handleChange} placeholder="Rating" />
                             <div className="box">
                                 <select onChange={handleSelectedPlatforms} id="platformId">
                                     <option value="">
@@ -142,9 +141,14 @@ export const Form = () => {
                                 <input type="text" name="genres" value={input.genres} onChange={handleSubmit} />
                             </div>
                             <span>
-                                <button type="submit"> Crear Juego 🎮</button>
-                                <button type= "button" onClick={(e) => handleRedirectToHome(e)}> VOLVER AL HOME</button>
+                                <button type="submit"> Ingresar Juego 🎮</button>
+                                <button type= "button" onClick={(e) => handleRedirectToHome(e)}> VOLVER AL INICIO</button>
                             </span>
+                            <>
+                            <button onClick={() => clear()}>
+                                LIMPIAR LOS CAMPOS
+                                </button>
+                            </>
                         </div>
                     </form>
                 </>}

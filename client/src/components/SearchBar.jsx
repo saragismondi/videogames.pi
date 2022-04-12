@@ -1,6 +1,6 @@
 import React from "react";
 import { getAllVideogamesByName } from "../redux/actions";
-import { useDispatch } from "react-redux"; // esto es de react-redux porque neceito  en este componenete despachar una action 
+import { useDispatch, useSelector} from "react-redux"; // esto es de react-redux porque neceito  en este componenete despachar una action 
 import { useState } from "react";
 import "../css/SearchBar.css";
 
@@ -8,21 +8,21 @@ import "../css/SearchBar.css";
 export const SearchBar = () => {
     const [input, setInput] = useState("");
     const dispatch = useDispatch();
-
+  
+  const allvideogamesByName = useSelector((state) => state.allvideogamesByName);
+  
     const handleInput = (e) => {
         e.preventDefault();
         setInput(e.target.value)
-
     };
     const handleSubmit = (e) => {
         e.preventDefault()
-        dispatch(getAllVideogamesByName(input));
+       dispatch(getAllVideogamesByName(input)) 
     };
     const clear = () => {
         setInput("")
         dispatch(getAllVideogamesByName(""))
     };
-
     return (
         <div className="searchBarConteiner">
                 <input type="text"
@@ -34,9 +34,10 @@ export const SearchBar = () => {
                 <button type="submit"
                     onClick={(e) => handleSubmit(e)}>Buscar</button>
                 <button onClick={() => clear()}>
-                    Clear
+                    LIMPIAR CAMPO
                 </button>
             </div>
         </div>
     )
 };
+ 

@@ -1,0 +1,6 @@
+.errorContenier{
+    display: inline-flex;
+    padding: 200px; 
+    flex-wrap: wrap;
+    width: max-content;
+}

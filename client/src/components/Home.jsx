@@ -7,16 +7,14 @@ import { SearchBar } from "./SearchBar.jsx";
 import { Filtrados } from "./Filtrados";
 import { Pagination } from "./Pagination";
 import { Loading } from "./Loadind";
+import {Error} from "./Error.jsx";
 import "../css/Home.css";
-
 
 export const Home = () => {
   const dispatch = useDispatch();
   const todosLosJuegos = useSelector((state) => state.videogames);
   const allGenres = useSelector((state) => state.allGenres);
   const loading = useSelector((state) => state.loading);
-  //const [laoding, setLoading] = useState(false)
-  //console.log(todosLosJuegos, "estado de redux todos los juegos ")
 
   const [currentPage, setCurrentPage] = useState(1);//declaro un estado local y la pag actual, marcando el estado con el que va arrancar.
   const [videoGamesPerPage, setvideoGamesPerPage] = useState(12);//declaro otro estado local donde tengo la cantidad de juegos por pagina
@@ -65,7 +63,6 @@ export const Home = () => {
       setCurrentPage(1)
     }
   };
-
   const handleRedirec = () => {
     window.location.href = "/"
   };
@@ -77,7 +74,6 @@ export const Home = () => {
       {loading ? <Loading /> :
         <>
           <div className="homeTitleConteiner">
-
             <h4 className="bienvenidos homeTitle">APP DE VIDEOJUEGOS </h4>
             <SearchBar />
           </div>
@@ -101,7 +97,7 @@ export const Home = () => {
               pag={pag} />
           </div>
           <div className="cardsConteiner">
-            {currentVideogames.length > 0 &&
+            {currentVideogames.length > 0 ?
               currentVideogames.map((g) => {
                 return (
                   <Fragment key={g.id}>
@@ -110,8 +106,11 @@ export const Home = () => {
                     />
                   </Fragment>
                 );
-              })}
+              }) :
+               <Error/>
+            }
           </div> </>}
     </div>
   );
 };
+

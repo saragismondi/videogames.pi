@@ -13,6 +13,7 @@ const handleDirecToDetails = () => {
                 <p className=" bienvenidos cardGenre">Generos</p>
                {genres.map((e) => e + "  | ")}
                <p></p>
+               
             <button onClick={handleDirecToDetails}>Mas detalles </button>
         </div>
     )

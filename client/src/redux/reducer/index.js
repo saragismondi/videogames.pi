@@ -14,6 +14,7 @@ import {
 const InitialState = {
   backupvideogames: [],
   videogames: [],
+  allvideogamesByName: [],
   getVideogameById: [],
   allGenres: [],
   backupfiltered: [],
@@ -25,19 +26,21 @@ function rootReducer(state = InitialState, action) {
     case ALL_VIDEOGAMES:
       return {
         ...state,
-        videogames: action.payload, /// osea el json.data de las action
+        videogames: action.payload, 
         backupvideogames: action.payload,
         backupfiltered: action.payload,
       };
     case ALL_VIDEOGAMES_BY_NAME:
+     // console.log(state.allvideogamesByName, "redux de NOMBRES")
       return {
         ...state,
         videogames: action.payload,
+        allvideogamesByName: action.payload
       };
     case GET_DETAIL:
       return {
         ...state,
-        getVideogameById: action.payload, // revisar porque viene dentro de un array buscar en api VER ESTO SIN CON [] O SIN
+        getVideogameById: action.payload, 
       };
     case POST_VIDEOGAME:
       return {
@@ -61,7 +64,7 @@ function rootReducer(state = InitialState, action) {
             if (a.name.toLowerCase() < b.name.toLowerCase()) {
               return -1;
             }
-            return 0;
+            return 0; // preg jere
           });
           break;
         case "Z-A":
@@ -103,7 +106,6 @@ function rootReducer(state = InitialState, action) {
           if (e.genres.length === 0) {
             return e.genres;
           } else if (e.genres.some((e) => e.name === action.payload)) {
-            // esto no me esta incluyendo cuando algo viene de la DB y cuando de
             return e.genres.map((el) => el.name);
           } else {
             return e.genres.includes(action.payload);
@@ -128,7 +130,6 @@ function rootReducer(state = InitialState, action) {
             //console.log(el.id.length, "hola soy el.id.length")
             //console.log(typeof(el.id), "hola soy el.id TYPEOF")
             //console.log(typeof(el.id))
-
             if (typeof el.id === "number" && el.id < 10000) {
               return el;
             }
@@ -156,7 +157,6 @@ function rootReducer(state = InitialState, action) {
         videogames: [...state.backupvideogames],
       };
     case LOADING:
-      console.log(action.payload, "hola soy la ction de loading");
       return {
         ...state,
         loading: action.payload,
