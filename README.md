@@ -9,6 +9,14 @@
 
 ![videogames1](https://user-images.githubusercontent.com/82971303/176019756-fa91a582-e2fd-434f-8602-9026bdbd64a5.jpeg)
 
+
+
+
+
+<p> DEPLOY DE LA  VIDEOGAME APP  </p>
+
+<p> https://videogameappsg.vercel.app/  </p>
+
 <p align='left'>
     <img src='https://static.wixstatic.com/media/85087f_0d84cbeaeb824fca8f7ff18d7c9eaafd~mv2.png/v1/fill/w_160,h_30,al_c,q_85,usm_0.66_1.00_0.01/Logo_completo_Color_1PNG.webp' </img>
 </p>
