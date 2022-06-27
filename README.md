@@ -175,3 +175,10 @@ __IMPORTANTE__: No está permitido utilizar los filtrados, ordenamientos y pagin
 - [ ] Al menos tener un componente del frontend con sus tests respectivos
 - [ ] Al menos tener una ruta del backend con sus tests respectivos
 - [ ] Al menos tener un modelo de la base de datos con sus tests respectivos
+
+![videogames4](https://user-images.githubusercontent.com/82971303/176019338-08c31dc1-46d8-4c3d-95b2-794e88c6828f.jpeg)
+
+![videogames3](https://user-images.githubuserc![videogames2](https://user-images.![videogames1](https://user-images.githubusercontent.com/82971303/176019373-2206a724-4989-47f5-8eb6-0907e83a5659.jpeg)
+githubusercontent.com/82971303/176019356-55e525f8-3b37-4a81-acd1-4b5a95c9006d.jpeg)
+ontent.com/82971303/176019344-9b8417dc-48e1-430f-9648-1937aed0becb.jpeg)
+
