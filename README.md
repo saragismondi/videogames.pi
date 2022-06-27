@@ -1,3 +1,14 @@
+
+![videogames4](https://user-images.githubusercontent.com/82971303/176019566-53992c03-30a3-4bf3-982f-4eb6f62e30c3.jpeg)
+
+
+![videogames3](https://user-images.githubusercontent.com/82971303/176019677-a27c1bfa-55bb-4f0d-afce-cb678a59c5a2.jpeg)
+
+
+![videogames2](https://user-images.githubusercontent.com/82971303/176019707-a0b7461a-107f-41b7-963c-8b2ebf0d02f0.jpeg)
+
+![videogames1](https://user-images.githubusercontent.com/82971303/176019756-fa91a582-e2fd-434f-8602-9026bdbd64a5.jpeg)
+
 <p align='left'>
     <img src='https://static.wixstatic.com/media/85087f_0d84cbeaeb824fca8f7ff18d7c9eaafd~mv2.png/v1/fill/w_160,h_30,al_c,q_85,usm_0.66_1.00_0.01/Logo_completo_Color_1PNG.webp' </img>
 </p>
@@ -175,10 +186,4 @@ __IMPORTANTE__: No está permitido utilizar los filtrados, ordenamientos y pagin
 - [ ] Al menos tener un componente del frontend con sus tests respectivos
 - [ ] Al menos tener una ruta del backend con sus tests respectivos
 - [ ] Al menos tener un modelo de la base de datos con sus tests respectivos
-
-![videogames4](https://user-images.githubusercontent.com/82971303/176019338-08c31dc1-46d8-4c3d-95b2-794e88c6828f.jpeg)
-
-![videogames3](https://user-images.githubuserc![videogames2](https://user-images.![videogames1](https://user-images.githubusercontent.com/82971303/176019373-2206a724-4989-47f5-8eb6-0907e83a5659.jpeg)
-githubusercontent.com/82971303/176019356-55e525f8-3b37-4a81-acd1-4b5a95c9006d.jpeg)
-ontent.com/82971303/176019344-9b8417dc-48e1-430f-9648-1937aed0becb.jpeg)
 
