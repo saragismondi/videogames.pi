@@ -20,7 +20,6 @@ const apiId = async (id) => {
       platforms: idApiData.platforms.map((e) => e.platform.name),
       genres: idApiData.genres.map((e) => e.name),
     };
-    //console.log(idDataLimpia);
     return idDataLimpia;
   } catch (error) {
     console.log(error);
@@ -54,7 +53,6 @@ const AllGamesById = async (id) => {
     return apiIdInfo;
   }
 };
-
 rutaVideogame.get("/:id", async (req, res) => {
   const { id } = req.params;
   const gamesIdApi = await AllGamesById(id);
@@ -62,10 +60,8 @@ rutaVideogame.get("/:id", async (req, res) => {
   return;
 });
 
-// POST
 rutaVideogame.post("/", async (req, res) => {
   const { name, description, released, rating, genres, platforms } = req.body;
-  // console.log(req.body);
   const videogameCreated = await Videogame.create({ 
     name,
     description,
@@ -82,35 +78,4 @@ rutaVideogame.post("/", async (req, res) => {
   await videogameCreated.addGenres(genreDb);
   res.send("Juego Creado");
 });
-//DELETE
-
-// router.delete("/delete/:id", async (req, res) => {
-//   const { id } = req.params;
-//   try {
-//     if (id) {
-//       await Pokemon.destroy({
-//         where: { id: id },
-//       });
-//     }
-//     return res.send({ msg: 'Pokemon deleted' });
-//   } catch (error) {
-//     console.log(error)
-//   }
-// });
-//PUT 
-// async function updateUser(req, res) {
-//   try { 
-// const id = req.params.id 
-// const {admin, active} = req.body 
-// console.log(admin, active) 
-//  const user = await User.findByPk(id) 
-    
-// if(admin !== undefined){user.admin=admin} 
-// if(active !== undefined){user.active=active} 
-// await user.save(); res.json(user); 
-// } catch (err) 
-// { console.log(err); 
-//res.status(500).json(err); 
-//}}
-
 module.exports = rutaVideogame;

@@ -9,9 +9,8 @@ rutaGenres.get("/", async (req, res) => {
     `https://api.rawg.io/api/genres?key=${API_KEY}`
   );
   const genres = genresApi.data.results.map((e) => e.name);
-  // console.log(genres, "Soy genres");
   genres.forEach((e) => {
-    Genres.findOrCreate({// los generos LIMPIOS con el id de la db 
+    Genres.findOrCreate({
       where: { name: e },
     });
   });

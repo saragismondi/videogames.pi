@@ -21,10 +21,6 @@ const listadoJuegosApi = async () => {
       ...paginaApiDos.data.results,
       ...paginaApiTres.data.results,
     ];
-    // console.log(juegosBd.dataValues, "soy juegos db")
-    //  console.log(paginaApiUno.data.results, "hola soy pagina uno")
-    //  console.log(paginaApiDos.data.results, "hola soy pagina dos")
-    //  console.log(paginaApiTres.data.results, "hola soy pagina tres")
     resultadoPaginas.forEach((et) => {
       juegosApi.push({
         id: et.id,
@@ -36,38 +32,6 @@ const listadoJuegosApi = async () => {
         genres: et.genres?.map((e) => e.name),
       });
     });
-    // console.log(paginaApiUno.data.results.filter(e => e.id * 1 === 4291), "soy pagina uno")
-    // console.log(paginaApiDos.data.results.filter(e => e.id * 1 === 4291), "doy pagina 2")
-    // console.log(paginaApiTres.data.results.filter(e => e.id * 1 === 4291), "soy pag 3")
-    // const games = []
-    // for( var i = 1; i <= 10; i++){
-    //    const game = await axios.get(`https://api.rawg.io/api/games?key=${API_KEY}&page_size=1&page=${i}`);
-    //    games.push({
-    //     id: game.data.results[0].id,
-    //     name: game.data.results[0].name,
-    //     released: game.data.results[0].released,
-    //     image: game.data.results[0].background_image,
-    //     rating: game.data.results[0].rating,
-    //     platforms: game.data.results[0].platforms?.map(e => e.platform.name),
-    //     genres: game.data.results[0].genres?.map(e => e.name)
-    //     })
-    //console.log(game.data.results[0].id, "soy game")
-    //}
-    // for( var i = 51; i <= 100; i++){
-    //   const game = await axios.get(`https://api.rawg.io/api/games?key=${API_KEY}&page_size=1&page=${i}`);
-    //   games.push({
-    //    id: game.data.results[0].id,
-    //    name: game.data.results[0].name,
-    //    released: game.data.results[0].released,
-    //    image: game.data.results[0].background_image,
-    //    rating: game.data.results[0].rating,
-    //    platforms: game.data.results[0].platforms?.map(e => e.platform.name),
-    //    genres: game.data.results[0].genres?.map(e => e.name)
-    //    })
-    //    //console.log(game.data.results[0].id, "soy game")
-    //  }
-    //console.log(games.length)
-    //  console.log(juegosApi.filter(e => e.id * 1 === 4291 ), "soy juego api" )
     return juegosApi;
   } catch (error) {
     return error;
@@ -88,7 +52,8 @@ const infoJuegosBd = async () => {
         id: et.id,
         name: et.name,
         released: et.released,
-        image:"https://scontent.frcu4-1.fna.fbcdn.net/v/t1.6435-9/118011151_640719076574401_1551517471314191853_n.png?_nc_cat=100&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=gybMtUPuJc0AX8rNFfF&_nc_ht=scontent.frcu4-1.fna&oh=00_AT_UozmX6vuVAQRrBYtqWgySrUbP-8UBQrpATFY2FaK31w&oe=62714922",
+        image:
+          "https://scontent.frcu4-1.fna.fbcdn.net/v/t1.6435-9/118011151_640719076574401_1551517471314191853_n.png?_nc_cat=100&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=gybMtUPuJc0AX8rNFfF&_nc_ht=scontent.frcu4-1.fna&oh=00_AT_UozmX6vuVAQRrBYtqWgySrUbP-8UBQrpATFY2FaK31w&oe=62714922",
         rating: et.rating,
         platforms: et.platforms,
         genres: et.genres?.map((e) => e.name),
@@ -113,7 +78,7 @@ rutaJuegos.get("/", async (req, res) => {
     let videogameName = await videogameTotal.filter((e) =>
       e.name.toLowerCase().includes(name.toLowerCase())
     );
-    res.status(200).send(videogameName)  
+    res.status(200).send(videogameName);
   } else {
     res.status(200).send(videogameTotal);
   }
