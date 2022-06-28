@@ -7,7 +7,6 @@ export const Pagination = ({ todosLosJuegos, pag, videoGamesPerPage }) => {
     for (let p = 1; p <= Math.ceil(todosLosJuegos / videoGamesPerPage); p++) {
         pages.push(p);
     };
-    //console.log(pages, "hola soy las paginas")
     return (
         <nav>
             <ul>

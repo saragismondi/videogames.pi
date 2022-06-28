@@ -1,12 +1,12 @@
 import './App.css';
-import {Routes, Route} from "react-router"; // envuelvo con Router las rutas 
-import {BrowserRouter} from "react-router-dom"; //envuelvo todo el return en un BrowserRouter
+import {Routes, Route} from "react-router"; 
+import {BrowserRouter} from "react-router-dom"; 
 import{React} from "react";
 import {LandingPage} from "./components/LandingPage.jsx";
 import {Home} from "./components/Home.jsx";
 import {Form} from "./components/Form.jsx";
 import Detail from "./components/Detail.jsx";
-// estudiar exact path
+
 function App() {
   return (
     <BrowserRouter> 

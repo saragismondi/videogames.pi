@@ -1,6 +1,6 @@
 import React from "react";
 import { getAllVideogamesByName } from "../redux/actions";
-import { useDispatch, useSelector} from "react-redux"; // esto es de react-redux porque neceito  en este componenete despachar una action 
+import { useDispatch, useSelector} from "react-redux"; 
 import { useState } from "react";
 import "../css/SearchBar.css";
 

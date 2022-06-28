@@ -8,7 +8,6 @@ import "../css/Form.css";
 export const Form = () => {
     const dispatch = useDispatch()
     const { allGenres, loading } = useSelector((state) => state)
-    //console.log( allGenres, "soy allgenres")
     const platforms = [
         "PC",
         "PlayStation",
@@ -88,7 +87,6 @@ export const Form = () => {
         } else if (input.genres.length === 0) {
             return alert("Coloca un o más Generos");
         } else {
-            //console.log(input);
             dispatch(postVideogame(input))
             setInput({
                 name: "",

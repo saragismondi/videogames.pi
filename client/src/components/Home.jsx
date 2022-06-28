@@ -16,10 +16,10 @@ export const Home = () => {
   const allGenres = useSelector((state) => state.allGenres);
   const loading = useSelector((state) => state.loading);
 
-  const [currentPage, setCurrentPage] = useState(1);//declaro un estado local y la pag actual, marcando el estado con el que va arrancar.
-  const [videoGamesPerPage, setvideoGamesPerPage] = useState(12);//declaro otro estado local donde tengo la cantidad de juegos por pagina
-  const inOfLastGame = currentPage * videoGamesPerPage;//seteo el indice del ultimo juego y le digo sobre la pag actual multiplicame la cantidad de juegos por pagina
-  const inOfFirstGame = inOfLastGame - videoGamesPerPage;// necesito setear el indice de mi primer juego en cada pag, ya que a medida q cambie la pag el primer juego cambia
+  const [currentPage, setCurrentPage] = useState(1);
+  const [videoGamesPerPage, setvideoGamesPerPage] = useState(12);
+  const inOfLastGame = currentPage * videoGamesPerPage; 
+  const inOfFirstGame = inOfLastGame - videoGamesPerPage;
   const currentVideogames = todosLosJuegos.slice(inOfFirstGame, inOfLastGame)
 
   const pag = (pages) => {
@@ -58,7 +58,6 @@ export const Home = () => {
     if (e.target.value === "") {
       dispatch(getAllVideogames())
     } else {
-      //console.log(e.target.value)
       dispatch(filterBySource(e.target.value))
       setCurrentPage(1)
     }

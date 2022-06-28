@@ -6,7 +6,6 @@ export const Filtrados = ({ handleFilter, handleSource, handleSort }) => {
     const dispatch = useDispatch()
     const generos = useSelector((state) => state.allGenres);
     const todaLaDta = useSelector((state) => state.videogames)
-    //console.log(todaLaDta)
     useEffect(() => {
         dispatch(getAllGenre())
     }, [todaLaDta])

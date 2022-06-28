@@ -19,7 +19,6 @@ export function getAllVideogames() {
     });
     try {
       const json = await axios.get("http://localhost:3001/videogames");
-      // console.log(json.data, "soy data de la action  ")
       dispatch({
         type: LOADING,
         payload: false,
@@ -64,26 +63,14 @@ export function getAllVideogamesByName(name) {
     }
   };
 }
-
-// export function getAllVideogamesByName(name) {
-//   // siempre pasar el parametro que necesito en el axios.get
-//   return async function(dispatch) {
-//    await axios.get(`http://localhost:3001/videogames?name=${name}`)
-//       .then((videogamesByName) => dispatch({ type: "ALL_VIDEOGAMES_BY_NAME", payload: videogamesByName.data }))
-//        //console.log(getAllVideogamesByName, "SOY LOS NOMBRES DE VIDEOGAME")
-//   };
-// };
-
 export function getDetail(id) {
   return async function (dispatch) {
-    //console.log( "accion de detail")
     dispatch({
       type: LOADING,
       payload: true,
     });
     try {
       const { data } = await axios.get(`http://localhost:3001/videogame/${id}`);
-      //console.log( "INFORMACION DE LA API, GETDETAIL", data)
       dispatch({
         type: LOADING,
         payload: false,

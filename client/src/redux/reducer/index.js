@@ -20,7 +20,6 @@ const InitialState = {
   backupfiltered: [],
   loading: false,
 };
-// nunca modificar el backupvideogames osea nunca ponerle backupvideogames: action.payload,
 function rootReducer(state = InitialState, action) {
   switch (action.type) {
     case ALL_VIDEOGAMES:
@@ -31,7 +30,6 @@ function rootReducer(state = InitialState, action) {
         backupfiltered: action.payload,
       };
     case ALL_VIDEOGAMES_BY_NAME:
-     // console.log(state.allvideogamesByName, "redux de NOMBRES")
       return {
         ...state,
         videogames: action.payload,
@@ -51,7 +49,6 @@ function rootReducer(state = InitialState, action) {
         ...state,
         allGenres: action.payload,
       };
-    // -----------------------------------OORDENAMIENTO-------------------------------------------------------------
     case ORDER_BY:
       let vgCopy = [...state.videogames];
       let ordenamiento;
@@ -64,7 +61,7 @@ function rootReducer(state = InitialState, action) {
             if (a.name.toLowerCase() < b.name.toLowerCase()) {
               return -1;
             }
-            return 0; // preg jere
+            return 0; 
           });
           break;
         case "Z-A":
@@ -79,7 +76,6 @@ function rootReducer(state = InitialState, action) {
           });
           break;
         case "Rating Asc":
-          //console.log(vgCopy, "hola soy vg copy")
           ordenamiento = vgCopy.sort(function (a, b) {
             return b.rating - a.rating;
           });
@@ -97,7 +93,6 @@ function rootReducer(state = InitialState, action) {
         ...state,
         videogames: ordenamiento,
       };
-    //-------------------------------------------------FILTRADO--------------------------------------------------------------------------------------
     case FILTER_BY_GENRES:
       let aux = [];
 
@@ -118,18 +113,12 @@ function rootReducer(state = InitialState, action) {
         ...state,
         videogames: aux,
       };
-    //..................................................FILTRO POR DB................................................................
     case FILTER_BY_SOURCE:
       let getVg = state.backupvideogames;
       let filtrado = [];
-      //console.log(getVg)
-      //console.log(action.payload === 'api')
       switch (action.payload) {
         case "api":
           filtrado = getVg.filter((el) => {
-            //console.log(el.id.length, "hola soy el.id.length")
-            //console.log(typeof(el.id), "hola soy el.id TYPEOF")
-            //console.log(typeof(el.id))
             if (typeof el.id === "number" && el.id < 10000) {
               return el;
             }
